@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+
+  foreman-proxy:
+    image: foreman-proxy
+    ports:
+      - 9090:9090
+      - 8000:8000
+      - 8443:8443
+    container_name: puppet-test.magnier.io
+    hostname: puppet-test.magnier.io
+    restart: always
+    volumes:
+      - /etc/foreman-proxy/settings.yml:/etc/foreman-proxy/settings.yml
+      - /etc/puppetlabs/puppet/ssl/:/etc/puppetlabs/puppet/ssl/

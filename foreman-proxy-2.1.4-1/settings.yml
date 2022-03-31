@@ -1,0 +1,15 @@
+---
+:settings_directory: "/etc/foreman-proxy/settings.d"
+
+
+:bind_host: '*'
+:http_port: 8000
+:https_port: 8443
+
+:trusted_hosts:
+  - foreman.magnier.io
+  - puppet-test.magnier.io
+
+:foreman_url: https://foreman.magnier.io
+:log_file: /var/log/foreman-proxy/proxy.log
+:log_level: DEBUG
